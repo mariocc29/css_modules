@@ -1,0 +1,22 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    [
+      "babel-plugin-transform-import-ignore",
+      {
+        "patterns": [
+          ".css",
+          ".scss",
+          ".svg",
+          ".jpeg",
+          ".jpg",
+          ".png",
+          "wildcard/*/match.css"
+        ]
+      }
+    ]
+  ]
+}
