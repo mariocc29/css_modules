@@ -12,12 +12,11 @@ const mockedClasses = {
 
 describe("App", () => {
   it("should render APP correctly", () => {
-    const AppWrapper = () => {
-      return <App classes={mockedClasses} />;
-    };
-
-    const { container, getByText } = render(<AppWrapper />);
+    const { container, getByText, debug } = render(
+      <App classes={mockedClasses} />
+    );
     const element = container.querySelector("div");
+    debug();
     expect(element).toHaveClass("mock-layout-class");
     expect(getByText("Mocked Component")).toBeInTheDocument();
   });
